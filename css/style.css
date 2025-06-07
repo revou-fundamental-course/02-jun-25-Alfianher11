@@ -1,19 +1,45 @@
-/* Header Component */
-.main-header{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 1rem 2rem;
+    color: white;
 }
 
-.main-logo{    
-    height: 50px;
-    width: 50px;
-    background-image: url(02-jun-25-Alfianher11\Asset\phi-logo.png);
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-nav{
+.nav-links {
+    list-style: none;
     display: flex;
-    justify-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #007BFF;
+    color: white;
 }
