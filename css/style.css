@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-nav {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,17 +13,20 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    background-image: url(https://picsum.photos/200);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
     gap: 1.5rem;
 }
 
-.nav-links li a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
