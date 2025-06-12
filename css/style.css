@@ -1,36 +1,45 @@
+/*GAK TAULAH PART PALING PUSINGGGGGGGGGGGGGGGGGG*/
+
+/* Reset default margin dan font dasar */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+/* =================== HEADER =================== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0f355d;
+    background-color: #0f355d; /* Biru gelap */
     padding: 2rem 3rem;
     color: white;
 }
 
+/* Logo bundar di pojok kiri */
 .logo {
     height: 50px;
     width: 50px;
-    background-image: url("../Asset/pp.png");
+    background-image: url("../Asset/pp.png"); /* Ganti jika perlu */
     border-radius: 50%;
     background-size: cover;
     background-position: center;
 }
 
+/* Navigasi kanan (horizontal untuk desktop) */
 .nav-links {
     display: flex;
     gap: 1.5rem;
 }
 
+/* Link navigasi */
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
+
+/* =================== MAIN CONTENT =================== */
 
 main {
     padding: 2rem;
@@ -40,6 +49,69 @@ section {
     margin-bottom: 2rem;
 }
 
+
+/* Animasi untuk membuat quote tampil smooth */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container pembungkus banner dan teks overlay */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* Teks quote di atas banner */
+.quote-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* transparansi hitam */
+    padding: 6rem 12rem;
+    border-radius: 40px;
+    z-index: 2;
+}
+
+/* Style semua gambar banner */
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    opacity: 0.2;
+    z-index: 1;
+}
+/* style image baner keseluruhan dipecah kedalam 3 class*/
+
+.img-1 {
+    background-image: url("../Asset/1.jpg");
+}
+.img-2 {
+    background-image: url("../Asset/2.jpg");
+}
+.img-3 {
+    background-image: url("../Asset/3.jpg");
+}
+
+/* =================== FOOTER =================== */
 footer {
     text-align: center;
     padding: 1rem;
@@ -47,13 +119,16 @@ footer {
     color: white;
 }
 
-/* Responsive Styles */
+
+/* =================== RESPONSIVE STYLES =================== */
 @media (max-width: 768px) {
+    /* Header berubah ke bentuk vertikal */
     header {
         flex-direction: column;
         align-items: flex-start;
     }
 
+    /* Navigasi jadi vertikal */
     .nav-links {
         flex-direction: column;
         align-items: flex-start;
@@ -61,10 +136,12 @@ footer {
         margin-top: 1rem;
     }
 
+    /* Ruang antar link */
     .nav-links a {
         padding: 0.5rem 0;
     }
 
+    /* Padding konten utama dikurangi */
     main {
         padding: 1rem;
     }

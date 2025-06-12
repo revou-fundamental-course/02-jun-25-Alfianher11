@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tag penting untuk responsivitas dan pengkodean -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- Link ke file CSS eksternal -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!--Ini bagian header-->
+    <!-- ====================== HEADERxNAVBar ====================== -->
     <header>
+        <!--ini logo pojok kiri-->
         <div class="logo"></div>
         <div> Alfian Herdiyanto</div>
-        <div class="nav-links">
+
+        <!--Navigasi pojok kanan-->
+        <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#profile">My Profile</a>
             <a href="#achievement">Achievement</a>
             <a href="#projects">Projects</a>
             <a href="#experiences">Experiences</a>
             <a href="#contact">Contact</a>
-        </div>
+        </Nav>
     </header>
 
-    <!--Ini konten utama-->
+    <!-- ====================== MAIN CONTENT ====================== -->
     <main>
-
-        <!--Menampilkan input sambutan memanggil dari script.js-->
         <section id="home">
+            <!--Menampilkan input sambutan memanggil dari script.js-->
             <h2 id="greeting"></h2>
-            <!--<p>This is the home section.</p>-->
+            <div class="banner-container">
+                <blockquote class="quote-overlay">
+                    <span id="quote-text">"Stay curious, keep building, and never stop learning."</span>
+                </blockquote>
+                <div class="banner-img img-1"></div>
+                <div class="banner-img img-2"></div>
+                <div class="banner-img img-3"></div>
+            </div>
         </section>
 
         <!--menampilkan profile-->
@@ -81,10 +92,12 @@
         </section>
     </main>
 
+     <!-- ====================== FOOTER ====================== -->
     <footer>
         <p>&copy; 2025 My Portfolio. All rights reserved.</p>
     </footer>
 
+    <!-- Script JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
