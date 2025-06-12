@@ -1,28 +1,15 @@
 /*GAK TAULAH PART PALING PUSINGGGGGGGGGGGGGGGGGG*/
 
 /* Reset default margin dan font dasar */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* =================== HEADER =================== */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0f355d; /* Biru gelap */
-    padding: 1rem 3rem;
-    color: white;
-}
-
-/* Navbar utama */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* =================== HEADER =================== */
+
+/* Navbar utama */
 
 body, html {
   font-family: sans-serif;
