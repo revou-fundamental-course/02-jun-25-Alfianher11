@@ -33,12 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
 ];
 
 let index = 0;
-const quoteEl = document.getElementById("quote-text");*/
+const quoteEl = document.getElementById("quote-text");
 
 setInterval(() => {
     index = (index + 1) % quotes.length;
     quoteEl.textContent = quotes[index];
-}, 5000);
+}, 5000);*/
 
 /*Bannernya gerak boy*/
 let indexBanner = 0;

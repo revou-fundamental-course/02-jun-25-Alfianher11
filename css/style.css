@@ -1,32 +1,38 @@
-/*GAK TAULAH PART PALING PUSINGGGGGGGGGGGGGGGGGG*/
-
 /* Reset default margin dan font dasar */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-/* =================== HEADER =================== */
-
-/* Navbar utama */
-
-body, html {
-  font-family: sans-serif;
+html {
   scroll-behavior: smooth;
 }
 
+/* =================== NAVBAR =================== */
 .navbar {
   background-color: #001f3f;
   color: white;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .navbar .brand {
@@ -35,75 +41,108 @@ body, html {
   gap: 10px;
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
-.navbar .logo {
+.logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.25rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #00d4ff;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
 
 /* =================== MAIN CONTENT =================== */
-
 main {
-    padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
 section {
-    margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
+section h2 {
+  color: #001f3f;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #001f3f;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
 
-/* Animasi untuk membuat quote tampil smooth */
+/* =================== HERO / QUOTE =================== */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Container pembungkus banner dan teks overlay */
 .banner-container {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-top: 4.5rem;
 }
 
-/* Teks quote di atas banner */
 .quote-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* lebih gelap agar teks makin jelas */
-    padding: 2rem 3rem; /* jangan terlalu besar biar tidak menutup gambar penuh */
-    border-radius: 16px;
-    z-index: 2;
-    width: 80%;
-    max-width: 800px;
-    animation: fadeIn 2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  z-index: 2;
+  width: 85%;
+  max-width: 700px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 /* Gambar banner */
@@ -140,36 +179,41 @@ section {
 
 /* =================== FOOTER =================== */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #0f355d;
-    color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: #0f355d;
+  color: white;
 }
-
 
 /* =================== RESPONSIVE STYLES =================== */
 @media (max-width: 768px) {
-    /* Header berubah ke bentuk vertikal */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #001f3f;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    display: none;
+  }
 
-    /* Navigasi jadi vertikal */
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
+  .nav-links.show {
+    display: flex;
+  }
 
-    /* Ruang antar link */
-    .nav-links a {
-        padding: 0.5rem 0;
-    }
+  .Kucing {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
 
-    /* Padding konten utama dikurangi */
-    main {
-        padding: 1rem;
-    }
+  .Kucing span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+  }
 }
