@@ -77,16 +77,19 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* transparansi hitam */
-    padding: 6rem 12rem;
-    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* lebih gelap agar teks makin jelas */
+    padding: 2rem 3rem; /* jangan terlalu besar biar tidak menutup gambar penuh */
+    border-radius: 16px;
     z-index: 2;
+    width: 80%;
+    max-width: 800px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Style semua gambar banner */
+/* Gambar banner */
 .banner-img {
     position: absolute;
     top: 0;
@@ -96,9 +99,16 @@ section {
     background-size: cover;
     background-position: center;
     display: none;
-    opacity: 0.2;
+    opacity: 1; /* buat gambar terlihat normal */
     z-index: 1;
+    transition: opacity 1s ease-in-out;
 }
+
+.banner-img.active {
+    display: block;
+    opacity: 1;
+}
+
 /* style image baner keseluruhan dipecah kedalam 3 class*/
 
 .img-1 {
