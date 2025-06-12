@@ -15,7 +15,7 @@ header {
 .logo {
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/200);
+    background-image: url("../Asset/pp.png");
     border-radius: 50%;
     background-size: cover;
     background-position: center;

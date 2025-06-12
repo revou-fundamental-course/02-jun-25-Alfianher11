@@ -2,7 +2,7 @@
 console.log("Portfolio website loaded.");
 
 // Greet the user
-window.addEventListener('DOMContentLoaded', () => {
+/*window.addEventListener('DOMContentLoaded', () => {
     const greetingElement = document.getElementById('greeting');
     const hours = new Date().getHours();
     let greetingText = "";
@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
         greetingText = "Good evening";
     }
 
-    const name = prompt("Hi! What's your name?");
+    const name = prompt("Hi! Welcome! What's your name?");
     greetingElement.textContent = `${greetingText}, ${name || "guest"}! Welcome to my portfolio website.`;
-});
+});*/
 
