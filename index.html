@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <!-- Meta tag penting untuk responsivitas dan pengkodean -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Alfian Herdiyanto Profile</title>
+
     <!-- Link ke file CSS eksternal -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!--Menambahkan library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+      <style>
+    html {
+      scroll-behavior: smooth;
+    } </style>
+
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+    <div class="container navbar-container">
+        <div class="navbar-left">
+        <a href="#home" class="brand">
+            <img src="./asset/pp.jpg" alt="Logo" class="logo" />
+            <span class="brand-name">Alfian</span>
+        </a>
+        </div>
+
+        <div class="Kucing" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievement">Portfolio</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    </nav>
+
     <!-- ====================== HEADERxNAVBar ====================== -->
     <header>
-        <!--ini logo pojok kiri-->
-        <div class="logo"></div>
-        <div> Alfian Herdiyanto</div>
-
-        <!--Navigasi pojok kanan-->
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#profile">My Profile</a>
-            <a href="#achievement">Achievement</a>
-            <a href="#projects">Projects</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#contact">Contact</a>
-        </Nav>
+        <!--Menampilkan input sambutan memanggil dari script.js-->
+        <h2 id="greeting"></h2>
+        <div class="banner-container">
+            <blockquote class="quote-overlay">
+                <span id="quote-text">"Stay curious, keep building, and never stop learning."</span>
+            </blockquote>
+            <div class="banner-img img-1"></div>
+            <div class="banner-img img-2"></div>
+            <div class="banner-img img-3"></div>
+        </div>
     </header>
+    
 
     <!-- ====================== MAIN CONTENT ====================== -->
     <main>
         <section id="home">
-            <!--Menampilkan input sambutan memanggil dari script.js-->
-            <h2 id="greeting"></h2>
-            <div class="banner-container">
-                <blockquote class="quote-overlay">
-                    <span id="quote-text">"Stay curious, keep building, and never stop learning."</span>
-                </blockquote>
-                <div class="banner-img img-1"></div>
-                <div class="banner-img img-2"></div>
-                <div class="banner-img img-3"></div>
-            </div>
+
         </section>
 
         <!--menampilkan profile-->
-        <section id="profile">
-            <h2>My Profile</h2>
-            <p><strong>Name:</strong> Alfian Herdiyanto</p>
-            <p><strong>Email:</strong> alfiherdiyanto17@gmail.com</p>
-            <p><strong>Phone:</strong> +62 822 4647 0946</p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/a-herdiyanto/" target="_blank">linkedin.com/in/a-herdiyanto</a></p>
-            <p><strong>Address:</strong> Gang Bara 4, Dramaga, Kabupaten Bogor 16680</p>
-            <p><strong>Summary:</strong> Physics graduate specializing in astrophysics with skills in Python, data analysis, simulation, electronics, and IoT.</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Physics graduate specializing in astrophysics with skills in Python, data analysis, simulation, electronics, and IoT.</p>
         </section>
 
         <!--Menampilkan Achievment-->
@@ -66,7 +89,7 @@
 
         <!--menampilkan proyek-->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>My Projects</h2>
             <ul>
                 <li>Alcohol Detection Tool (IoT)</li>
                 <li>AI-based Color Sensor Robot</li>

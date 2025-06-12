@@ -12,8 +12,65 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #0f355d; /* Biru gelap */
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     color: white;
+}
+
+/* Navbar utama */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #0f355d;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Brand name */
+.brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Link navigasi */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Hover underline animasi */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: #00bfff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bfff;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Logo bundar di pojok kiri */
@@ -26,18 +83,6 @@ header {
     background-position: center;
 }
 
-/* Navigasi kanan (horizontal untuk desktop) */
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-/* Link navigasi */
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 /* =================== MAIN CONTENT =================== */
 

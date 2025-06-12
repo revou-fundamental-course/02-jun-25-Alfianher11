@@ -1,6 +1,8 @@
 // Add interactivity if needed in future
 console.log("Portfolio website loaded.");
 
+/* =================== HEADER =================== */
+
 // Greet the user
 window.addEventListener('DOMContentLoaded', () => {
     const greetingElement = document.getElementById('greeting');
@@ -19,14 +21,11 @@ window.addEventListener('DOMContentLoaded', () => {
     greetingElement.textContent = `${greetingText}, ${name || "guest"}! Welcome to my portfolio website.`;
 });
 
-
-/* =================== HEADER =================== */
-
 /* =================== MAIN Content =================== */
 
 
 /* Tulisan diatas bannernya ganti ganti */
-const quotes = [
+/*const quotes = [
     "\"Stay curious, keep building, and never stop learning.\"",
     "\"Great things are done by a series of small things brought together.\"",
     "\"Code is like humor. When you have to explain it, it’s bad.\"",
@@ -34,18 +33,12 @@ const quotes = [
 ];
 
 let index = 0;
-const quoteEl = document.getElementById("quote-text");
+const quoteEl = document.getElementById("quote-text");*/
 
 setInterval(() => {
     index = (index + 1) % quotes.length;
     quoteEl.textContent = quotes[index];
 }, 5000);
-
-setInterval(() => {
-    quoteIndex = (quoteIndex + 1) % quotes.length;
-    quoteElement.textContent = quotes[quoteIndex];
-}, 5000); // ganti setiap 5 detik
-
 
 /*Bannernya gerak boy*/
 let indexBanner = 0;
